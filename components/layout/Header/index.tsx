@@ -10,15 +10,23 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import IconButton from "@material-ui/core/IconButton";
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const HeaderContainer = styled.header`
+  background: #ffffff;
+  box-shadow: 0px 10px 40px rgba(89, 120, 150, 0.06);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  
   nav {
-    background: #ffffff;
-    box-shadow: 0px 10px 40px rgba(89, 120, 150, 0.06);
-    height: 80px;
+    height: 100%;
     width: 100%;
+    max-width: 1200px;
     display: flex;
+    margin: 0 auto;
 
     .logo {
       height: 100%;
@@ -94,7 +102,8 @@ const HeaderContainer = styled.header`
       height: 100%;
       display: flex;
       align-items: center;
-      padding-right: 40px;
+      border-left: 1px solid #f4f4f4;
+      padding-left: 40px;
 
       .avatar-user {
         width: 42px;
@@ -104,6 +113,7 @@ const HeaderContainer = styled.header`
         margin-right: 15px;
         background-position: center;
         background-size: contain;
+        background-repeat: no-repeat;
       }
 
       .user-name {
@@ -194,7 +204,10 @@ const Header = () => {
         </div>
 
         <div className="user-info">
-          <div style={{backgroundImage: 'url(./avatar-demo.png)'}} className="avatar-user"></div>
+          <div
+            style={{ backgroundImage: "url(./avatar-demo.png)" }}
+            className="avatar-user"
+          ></div>
           <div className="name-user">Juillian Lee</div>
           <div>
             <IconButton
