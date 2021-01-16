@@ -3,13 +3,13 @@ import styled from "styled-components";
 import Avatar from "@material-ui/core/Avatar";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
 
-import Layout from "../components/Layout";
+import Layout from "./components/Layout";
 
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { useState } from "react";
-import Card from "../components/card/Card";
+import Card from "./components/card/Card";
 
 const Container = styled.div`
   width: 100%;
