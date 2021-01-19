@@ -2,9 +2,9 @@ import mongoose, { Document, Schema, Model } from "mongoose";
 import crypto from "crypto";
 
 export enum Gender {
-  "M",
-  "F",
-  "T",
+  "M" = "M",
+  "F" = "F",
+  "T" = "T",
 }
 
 export type UserDocument = Document & {

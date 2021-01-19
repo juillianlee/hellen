@@ -4,7 +4,7 @@ import nextConnect from "next-connect";
 
 async function database(_: NextApiRequest, res: NextApiResponse, next: any) {
   try {
-    await mongoose.connect("mongodb+srv://hellen:hellen@cluster0.jfq3j.mongodb.net/hellen", {
+    await mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,

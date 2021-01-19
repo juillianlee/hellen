@@ -7,6 +7,7 @@ export class UserHelper {
     readonly createdAt: string;
     readonly updatedAt: string;
     readonly birthDate: string;
+    readonly gender: string
 
     constructor(user: UserDocument) {
         this.name = user.email;
@@ -14,5 +15,6 @@ export class UserHelper {
         this.createdAt = user.createdAt.toLocaleString('pt-BR');
         this.updatedAt = user.updatedAt.toLocaleString('pt-BR');
         this.birthDate = user.birthDate.toLocaleString('pt-BR');
+        this.gender = user.getGender();
     }
 }
