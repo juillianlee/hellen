@@ -12,6 +12,7 @@ async function database(_: NextApiRequest, res: NextApiResponse, next: any) {
     })
     next();
   } catch(ex) {
+    console.log(ex);
     res.json({
       error: 'INTERNAL_SERVER_ERROR'
     })

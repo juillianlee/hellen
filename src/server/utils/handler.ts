@@ -12,7 +12,7 @@ const handler = nextConnect({
       });
     }
     res.status(500).end(err.toString());
-  },
+  }
 });
 handler.use(dbMiddleware);
 
